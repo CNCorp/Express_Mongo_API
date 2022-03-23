@@ -11,7 +11,7 @@ TOKEN_KEY="clé de chiffrement JsonWebToken"
 
 _Pour générer la clé de chiffrement [voir ici](https://mkjwk.org/)_
 
-- Dans le dossier racine*API, `npm install` , puis `npm start`.<br>(\_le terminal doit confirmer le lancement du serveur sur le port 3000 et la connexion à MongoDB*)
+- Dans le dossier racine ➡️ `npm install` , puis `npm start`.<br>(_le terminal doit confirmer le lancement du serveur sur le port 3000 et la connexion à MongoDB_)
 
 #### Vous pouvez utiliser l'API 👍
 
