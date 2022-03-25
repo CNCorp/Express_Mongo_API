@@ -8,9 +8,14 @@ const path = require("path");
 
 require("dotenv").config();
 
+const port = 3000;
+
 mongoose
-  .connect(process.env.DB_ACCESS)
-  .then(() => console.log("Connexion à MongoDB réussie ! 🌿"))
+  .connect(process.env.DB_ACCESS, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("Connecté à MongoDB ! 🌿"))
   .catch((err) => console.log(err));
 
 const app = express();
@@ -38,4 +43,4 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/articles", articleRoutes);
 app.use("/api/users", userRoutes);
 
-module.exports = app;
+app.listen(port, () => console.log("📡 LISTENING ON PORT " + port));
